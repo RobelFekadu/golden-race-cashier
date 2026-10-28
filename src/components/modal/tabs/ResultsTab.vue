@@ -174,7 +174,7 @@ export default {
     },
     formatResults(r) {
       const nums = this.winningNumbers(r);
-      return nums.length ? nums.join(" - ") : "--";
+      return nums.length ? nums.slice(0, 3).join(" - ") : "--";
     },
     sliceNumbers(r, count) {
       const nums = this.winningNumbers(r);

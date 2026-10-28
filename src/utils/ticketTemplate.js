@@ -223,6 +223,19 @@ function gameLabel(value) {
     .replace(/\b\w/g, (char) => char.toUpperCase());
 }
 
+const GAME_ICON_FILES = {
+  car: "kart",
+  motorbike: "motorbike",
+  horse: "horse",
+  greyhound: "dog",
+  keno: "keno",
+};
+
+function gameIconFile(value) {
+  const meta = gameMeta(value);
+  return GAME_ICON_FILES[meta?.icon] || "kart";
+}
+
 function marketLabel(value) {
   const raw = String(value || "").toUpperCase();
   if (raw.includes("TRIFECTA")) return "Trifecta";
@@ -478,58 +491,61 @@ function winningNumbers(result) {
   return [];
 }
 
-function formatResultsNumbers(result) {
-  return winningNumbers(result).join(" - ") || "--";
-}
-
-function formatOddEven(result) {
-  const numbers = winningNumbers(result);
-  if (!numbers.length) return "--";
-  return numbers[0] % 2 === 1 ? "Odd" : "Even";
-}
-
-function formatOverUnder(result) {
-  const numbers = winningNumbers(result);
-  if (!numbers.length) return "--";
-  return numbers[0] >= 4 ? "Over" : "Under";
-}
-
 export function renderResults(payload = {}) {
   const results = Array.isArray(payload.results) ? payload.results : [];
-  const blocks = results
+  const meta = gameMeta(payload.gameType);
+  const label = (
+    payload.gameLabel ||
+    gameLabel(payload.gameType) ||
+    "KART RACING"
+  ).toUpperCase();
+  const trackName = payload.trackName || meta?.subtitle || "";
+  const icon = gameIconFile(payload.gameType);
+
+  const rows = results
+    .slice(0, 10)
     .map((result) => {
       const event =
         result.game?.gameNumber ?? result.gameNumber ?? result.id ?? "";
-      const date = result.game?.endTime || result.endTime || "";
-      const numbers = winningNumbers(result);
-      const exacta =
-        numbers.length >= 2 ? `${numbers[0]}, ${numbers[1]}` : "--";
-      const quinella =
-        numbers.length >= 2
-          ? [Number(numbers[0]), Number(numbers[1])]
-              .sort((a, b) => a - b)
-              .join(", ")
-          : "--";
-
+      const numbers = winningNumbers(result).slice(0, 3);
       return `
-        <div class="result-block fs">
-          <div class="ticket-row"><span>#${escapeHtml(event)}</span><span>${escapeHtml(formatPrintedAt(date))}</span></div>
-          <div class="ticket-row"><span>Result</span><span>${escapeHtml(formatResultsNumbers(result))}</span></div>
-          <div class="ticket-row"><span>Win / Place</span><span>${escapeHtml(numbers[0] ?? "--")} / ${escapeHtml(numbers.slice(0, 2).join(", ") || "--")}</span></div>
-          <div class="ticket-row"><span>Exacta</span><span>${escapeHtml(exacta)}</span></div>
-          <div class="ticket-row"><span>Quinella</span><span>${escapeHtml(quinella)}</span></div>
-          <div class="ticket-row"><span>Odd / Even</span><span>${escapeHtml(formatOddEven(result))}</span></div>
-          <div class="ticket-row"><span>Over / Under</span><span>${escapeHtml(formatOverUnder(result))}</span></div>
-        </div>
+        <table class="tbSize padding">
+          <tbody>
+            <tr style="width: 50%">
+              <td align="left" style="width: 20%" class="ff fm"># ${escapeHtml(event)}</td>
+              <td align="right" style="width: 80%;" class="ff fs">${escapeHtml(numbers.join(", ") || "--")}</td>
+            </tr>
+          </tbody>
+        </table>
       `;
     })
     .join("");
 
   return `
-    <div class="ticket80">
-      <div class="ticket-row"><span>${escapeHtml(payload.shopName || "GOLDEN RACE")}</span><span>LAST RESULTS</span></div>
-      <div class="ticket-row"><span>${escapeHtml(gameLabel(payload.gameType || "Active game"))}</span><span>${escapeHtml(payload.date || formatPrintedAt(new Date()))}</span></div>
-      <div class="ticket-box"><div class="ticket-events">${blocks || '<div class="empty">No results</div>'}</div></div>
+    <div id="printAnchor" style="margin-left: 10px">
+      <div id="ticketTop">
+        <table class="tbHidden tbSize padding">
+          <tbody>
+            <tr>
+              <td><img class="cashier-ticket logo-brand" src="./assets/cashier/logos/vbox/vbox_brand.svg"></td>
+              <td><div class="cashier-ticket vertical-line"></div></td>
+              <td><div class="cashier-ticket icon-game-compact"><img width="32px" src="./assets/cashier/logos/default/${icon}.svg"></div></td>
+              <td><div class="cashier-ticket font-game font-game-compact align-right">${escapeHtml(label)}</div></td>
+            </tr>
+          </tbody>
+        </table>
+        <table style="width: 100%; padding-top: 10px; padding-bottom: 10px" class="tbHidden ff fm">
+          <tbody>
+            <tr style="width: 100%" class="tbHidden ff fl">
+              <td align="center">${escapeHtml(trackName)}</td>
+            </tr>
+            <tr style="width: 100%">
+              <td align="center">LATEST RESULTS</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      ${rows}
     </div>
   `;
 }
