@@ -1,0 +1,504 @@
+@charset "utf-8";
+/*font small*/
+/*font medium*/
+/*font large*/
+/*font large +*/
+/*font super large*/
+/*font small*/
+/*font medium*/
+/*font large*/
+/*font large +*/
+/*font super large*/
+
+.cashier-ticket,
+.cashier-ticket * {
+    font-weight: bolder !important;
+}
+
+#ticketTop {
+    margin-bottom: 3px;
+}
+
+.cashier-ticket .td-13 {
+    width: 13%;
+}
+
+.logo-brand {
+    height: 50px;
+    width: 130px;
+    margin-bottom: 4px;
+}
+
+.logo-brand-compact {
+    height: 40px;
+    width: 95px;
+    margin-bottom: 4px;
+}
+
+.cashier-ticket .icon-game {
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    float: right;
+}
+
+.cashier-ticket .icon-game-compact {
+    width: 32px !important;
+    height: 32px !important;
+    float: left;
+}
+
+.cashier-ticket .icon-game-small {
+    width: 25px !important;
+    height: 25px !important;
+    float: left;
+}
+
+.cashier-ticket.icon-game-small > svg {
+    width: 100% !important;
+    height: 100% !important;
+} 
+
+.cashier-ticket .icon-game-compact-right {
+    width: 32px !important;
+    height: 32px !important;
+    margin-right: 10px;
+    float: right;
+}
+
+@font-face {
+    font-family: DIN;
+    src: url('font/DIN-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bolder;
+}
+
+.cashier-ticket .font-game {
+    font-family: DIN;
+    font-size: 15px;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 95%;
+}
+
+.cashier-ticket .font-game-compact {
+    padding-left: 2.5px;
+    width: min-content;
+    float: right;
+}
+
+.cashier-ticket .align-right {
+    text-align: right !important;
+}
+
+.cashier-ticket .paddingTopBottom {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.cashier-ticket .paddingLeft {
+    padding-left: 5px;
+}
+
+.cashier-ticket .align-center {
+    text-align: center;
+}
+
+.tbMessage {
+    background-color: black !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact;
+}
+
+.cashier-ticket .tbHidden {
+    border-style: hidden;
+}
+.cashier-ticket .tbSize {
+    width: 250px;
+    border-spacing: 0px;
+}
+.cashier-ticket .tbSolid {
+    border: 1px solid black;
+}
+
+.cashier-ticket .tbSolidTop {
+    border-top: 1px solid black;
+}
+
+.cashier-ticket .tbHiddenTop {
+    border-top: none;
+}
+
+.cashier-ticket .tbResult {
+    background-color: black !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact;
+}
+.cashier-ticket .tbTitle {
+    background-color: #999 !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact;
+}
+.cashier-ticket .ff {
+    font-family: sans-serif;
+}
+.cashier-ticket .italic {
+    font-style: italic;
+    font-weight: bold !important;
+}
+
+.cashier-ticket .nfi {
+    font-weight: normal !important;
+}
+.cashier-ticket .bl {
+    font-weight: bold;
+}
+.cashier-ticket .nf {
+    font-weight: normal;
+}
+.cashier-ticket .nfi {
+    font-weight: normal !important;
+}
+.cashier-ticket .nw {
+    white-space: nowrap;
+}
+.cashier-ticket .ls {
+    letter-spacing: 2px;
+}
+.cashier-ticket .fxxs {
+    font-size: 7px;
+}
+.cashier-ticket .fxs {
+    font-size: 8px;
+}
+.cashier-ticket .fs {
+    font-size: 9px;
+}
+/*font small*/
+.cashier-ticket .fm {
+    font-size: 10px;
+}
+/*font medium*/
+.cashier-ticket .fl {
+    font-size: 12px;
+}
+/*font large*/
+.cashier-ticket .fml {
+    font-size: 16px;
+}
+/*font large +*/
+.cashier-ticket .fsl {
+    font-size: 20px;
+}
+
+/*font large + extra*/
+.cashier-ticket .fssl {
+    font-size: 30px;
+}
+
+/*font super large*/
+.cashier-ticket .ticket58 {
+    /*font small*/
+    /*font medium*/
+    /*font large*/
+    /*font large +*/
+    /*font super large*/
+    width: 220px;
+}
+.cashier-ticket .ticket58 .fs {
+    font-size: 12px;
+}
+.cashier-ticket .ticket58 .fm {
+    font-size: 12px;
+}
+.cashier-ticket .ticket58 .fl {
+    font-size: 12px;
+}
+.cashier-ticket .ticket58 .fml {
+    font-size: 20px;
+}
+.cashier-ticket .ticket58 .fsl {
+    font-size: 24px;
+}
+.cashier-ticket .ticket58 .barcodeSize {
+    font-size: 19px;
+}
+.cashier-ticket .ticket58 p {
+    font-size: 10px;
+}
+.cashier-ticket .ticket58 .tbSize {
+    width: 100%;
+    border-spacing: 0px;
+}
+.cashier-ticket .ticket58 .tbResult {
+    background-color: white !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact;
+}
+.cashier-ticket .line {
+    border-bottom: 1px solid;
+    width: 100%;
+}
+.cashier-ticket .vertical-line {
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    border-right: 0px solid;
+}
+.cashier-ticket .lineDotted {
+    border-bottom: 1px dotted;
+    width: 100%;
+}
+.cashier-ticket .padding {
+    padding: 3px 2px;
+}
+.cashier-ticket .paddingRight {
+    padding-right: 2px;
+}
+.cashier-ticket .paddingLeft {
+    padding-left: 2px;
+}
+.cashier-ticket .marginTop {
+    margin-top: 2px;
+}
+.cashier-ticket .marginTop10 {
+    margin-top: 10px;
+}
+.cashier-ticket .paddingTop {
+    padding-top: 2px;
+}
+.cashier-ticket .paddingBottom {
+    padding-bottom: 3px;
+}
+.cashier-ticket .paddingBottom5 {
+    padding-bottom: 5px;
+}
+.cashier-ticket .paddingBottom50 {
+    padding-bottom: 50px;
+}
+.cashier-ticket .bet *,
+.cashier-ticket table.bet {
+    border-spacing: 0px !important;
+}
+.cashier-ticket .bar *,
+.cashier-ticket table.bar {
+    border: 1px solid black;
+    border-collapse: collapse;
+    height: 45px;
+}
+.cashier-ticket .tdBar {
+    width: 3px;
+}
+.cashier-ticket .bigBar {
+    width: 89px;
+}
+.cashier-ticket *,
+.cashier-ticket *:after,
+.cashier-ticket *:before {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.cashier-ticket * {
+    padding: 0;
+    border: 0 none;
+    position: relative;
+}
+.cashier-ticket p {
+    background: inherit;
+    margin: 0 auto;
+    margin-bottom: 0rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    line-height: 15px;
+    display: flex;
+    align-items: flex-end;
+}
+.cashier-ticket .dotted:before {
+    content: ' ';
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    height: 0;
+    line-height: 0;
+    border-bottom: 2px dotted;
+}
+.cashier-ticket .preDotted {
+    position: relative;
+    background-color: rgba(255, 255, 255, 1);
+    padding-right: 2px;
+    margin-right: auto;
+    max-width: 125px;
+    display: inline-block;
+    white-space: normal;
+}
+.cashier-ticket .preDotted::before,
+.cashier-ticket .afterDotted::before,
+.cashier-ticket .oddDotted::before {
+    content: ' ';
+    position: absolute;
+    display: block;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    border-bottom: 11px solid #ffffff;
+}
+.cashier-ticket .preDotted.bl .preDotted1,
+.cashier-ticket .preDotted.bl .preDotted2 {
+    font-weight: bold !important;
+}
+.cashier-ticket .preDotted1 {
+    /* background: inherit; */
+    display: inline;
+    z-index: 1;
+}
+.cashier-ticket .preDotted2 {
+    /* background: inherit; */
+    display: inline;
+    z-index: 1;
+    font-weight: bolder !important;
+}
+.cashier-ticket .afterDotted {
+    background: inherit;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    z-index: 2;
+    padding-left: 2px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.cashier-ticket .oddDotted {
+    background: inherit;
+    position: relative;
+    bottom: 0;
+    text-align: right;
+    z-index: 2;
+    padding: 0 2px;
+}
+.cashier-ticket .maxWin {
+    background: inherit;
+    position: inherit;
+    bottom: 0;
+    right: 0;
+    font-size: 9px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: right;
+    z-index: 2;
+}
+.cashier-ticket .maxWon {
+    background: inherit;
+    position: relative;
+    bottom: 0;
+    right: 0;
+    font-weight: normal;
+    font-size: 9px;
+    text-align: right;
+    z-index: 2;
+}
+.cashier-ticket .circle {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 50%;
+    border: solid;
+    padding-top: 2px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+}
+.cashier-ticket .rectangle {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 50%;
+    border: solid;
+    padding-top: 2px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+}
+.cashier-ticket #flashContent,
+.cashier-ticket #frameDiv,
+.cashier-ticket #frameDivContent,
+.cashier-ticket #xpyinstaller,
+.cashier-ticket #configIFrame,
+.cashier-ticket #fontPreLoad,
+.cashier-ticket .button {
+    display: none !important;
+    visibility: hidden !important;
+}
+.cashier-ticket #printAnchor {
+    position: absolute;
+    display: block !important;
+    top: 0px;
+    left: 0px;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 200;
+}
+.cashier-ticket #printBaseAnchor {
+    position: absolute;
+    display: block !important;
+    top: 0px;
+    left: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+@page {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.cashier-ticket .ajustar {
+    width: 150px;
+    float: right;
+    white-space: pre;
+    /* CSS 2.0 */
+    white-space: pre-wrap;
+    /* CSS 2.1 */
+    white-space: pre-line;
+    /* CSS 3.0 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla */
+    word-wrap: break-word;
+    /* IE 5+ */
+}
+
+.cashier-ticket .flex-start,
+.cashier-ticket .flex-end {
+    display: inline-flex;
+}
+
+.cashier-ticket .flex-start {
+    align-items: flex-start;
+}
+
+.cashier-ticket .flex-end {
+    align-items: flex-end;
+}
+
+.cashier-ticket .wordBreak {
+    word-break: break-word;
+}
